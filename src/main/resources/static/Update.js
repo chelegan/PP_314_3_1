@@ -44,8 +44,12 @@ editUserModal.addEventListener('submit', el => {
             password: document.getElementById('passwordUpd').value,
             roles: selectedRoles
         })
-    }).then()
+    }).then(data => {
 
-    $('#editModal').modal('hide')
+        $('#editModal').modal('hide');
+        getAllUsers()
 
-})
+    })
+
+});
+
