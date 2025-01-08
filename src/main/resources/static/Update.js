@@ -16,13 +16,13 @@ on(document, 'click', '#edit-user', el => {
     $('#editModal').modal('show')
 })
 
-const addRoles = document.getElementById('editUser')
+const addUpdRoles = document.getElementById('editUser')
 
 editUserModal.addEventListener('submit', el => {
     el.preventDefault();
 
     const selectedRoles = [];
-    const roleOptions = addRoles.options;
+    const roleOptions = addUpdRoles.options;
     for (let i = 0; i < roleOptions.length; i++) {
         if (roleOptions[i].selected) {
             selectedRoles.push(roleOptions[i].value);
@@ -48,5 +48,4 @@ editUserModal.addEventListener('submit', el => {
 
     $('#editModal').modal('hide')
 
-    refreshTable()
 })

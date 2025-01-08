@@ -43,5 +43,4 @@ addUserForm.addEventListener('submit', (e) => {
         .then(res => {
             document.getElementById('add_new_user').click()
         })
-    refreshTable()
 });
